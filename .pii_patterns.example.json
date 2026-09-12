@@ -1,0 +1,9 @@
+{
+  "candidate_name": "Alex Morgan",
+  "candidate_email": "alex.morgan@example.com",
+  "candidate_phone_area_code": "555",
+  "candidate_phone_prefix": "010",
+  "candidate_phone_line": "0199",
+  "candidate_handles": ["alexmorgan"],
+  "protected_ids": ["your_google_sheet_id_here"]
+}

@@ -1,0 +1,5 @@
+- [x] Restore the human-centered homepage story
+- [x] Create the How to use page from the current product guide
+- [x] Modernize Clexibility with restrained motion
+- [x] Apply the supplied logo and blue brand system
+- [x] Verify all pages across desktop and mobile

@@ -1,0 +1,64 @@
+# Python & Environment
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.tmp
+*.zip
+*.tar.gz
+*.tgz
+
+# Internal Working Documents
+ORIGINAL_REQUEST.md
+
+# Sensitive Environment & Secrets
+.env
+.env.*
+!.env.example
+[Ss]ervice_account*.json
+service_account.json
+service_account*.json
+[Cc]redentials*.json
+credentials*.json
+
+# Candidate Private Configuration & Career Truth
+[Cc]onfig.py
+config.py
+[Cc]areer_truth_doc.md
+career_truth_doc.md
+[Mm]aster_resume.md
+master_resume.md
+[Rr]esume.pdf
+[Rr]esume.PDF
+resume.pdf
+resume_temp.html
+[Rr]esume_temp.html
+
+# Local Pipeline Databases & Scraped Caches
+applications_pipeline_local.csv
+discovered_jobs_cache.json
+user_feedback.json
+user_feedback*.json
+learning_profile.json
+learning_profile*.json
+
+# Local Browser Profiles & Unsanitized Meeting Notes
+chrome_profile/
+**/chrome_profile/
+granola_notes/
+**/granola_notes/
+# Runtime Logs & PIDs
+logs/
+.pids/
+
+# Agent Working Logs (may contain candidate PII)
+.agents/
+**/.agents/
+
+# PII Pattern Configuration (private candidate data)
+.pii_patterns.json
+
+# Nested __pycache__ directories
+**/__pycache__/

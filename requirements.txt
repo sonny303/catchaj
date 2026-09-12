@@ -1,0 +1,9 @@
+python-jobspy
+gspread
+google-auth
+playwright
+resend
+pydantic
+python-dotenv
+google-genai
+flask

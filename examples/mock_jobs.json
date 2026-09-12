@@ -1,0 +1,72 @@
+[
+  {
+    "job_hash": "mock_greenhouse_001",
+    "title": "Lead Product Manager, Clinical Intelligence & FHIR",
+    "company": "Beacon Health Solutions",
+    "location": "US-Remote",
+    "url": "https://boards.greenhouse.io/beaconhealth/jobs/4092811",
+    "ats_platform": "Greenhouse",
+    "is_remote": true,
+    "description": "Beacon Health is seeking an experienced Lead Product Manager to drive our clinical intelligence and data interoperability platform. You will lead cross-functional squads to scale FHIR APIs, integrate with hospital EHR systems (Epic, Cerner), and build clinical decision support (CDS) workflows for acute care networks. Responsibilities include defining multi-tenant B2B healthcare SaaS roadmaps, establishing clinical AI guardrails, and partnering with clinical informatics leaders to ensure high-sensitivity alerting and mitigate alarm fatigue. Requirements: 6+ years in healthcare technical product management, deep expertise with HL7 FHIR standards, prior-authorization workflows, and proven experience shipping B2B healthcare software products."
+  },
+  {
+    "job_hash": "mock_lever_002",
+    "title": "Senior Product Manager, Remote Patient Monitoring Platform",
+    "company": "PulseWave Medical",
+    "location": "Seattle, WA",
+    "url": "https://jobs.lever.co/pulsewave/88f2b710-219e-4c77-b952-094182939102",
+    "ats_platform": "Lever",
+    "is_remote": false,
+    "description": "PulseWave Medical is building the next-generation remote patient monitoring (RPM) ecosystem for cardio-pulmonary care. We are looking for a Senior Product Manager in Seattle, WA to lead our clinician workstation and continuous biometrics ingestion platform. In this role, you will collaborate with data scientists and clinicians to deploy predictive risk stratification, establish alert budgets to eliminate nursing alarm fatigue, and build SMART-on-FHIR embedded EHR apps. Requirements: 5+ years of digital health product management, hands-on experience with medical sensor data, EHR interoperability, and clinical user research."
+  },
+  {
+    "job_hash": "mock_ashby_003",
+    "title": "Principal Product Manager, Payer SaaS & Pricing Infrastructure",
+    "company": "Clarify Health Plans",
+    "location": "Canada-Remote",
+    "url": "https://jobs.ashbyhq.com/clarify-health/a94c172d-881b-4190-b14a-718290312019",
+    "ats_platform": "Ashby",
+    "is_remote": true,
+    "description": "Clarify Health Plans is reinventing health insurance administration with modern API-first infrastructure. As Principal Product Manager, you will lead the architecture and commercialization of our automated prior-authorization and real-time benefits verification engine. You will own integrations with payer policy clearinghouses, EDI 270/271/278 transactions, and ensure 100% compliance with federal price transparency rules. Requirements: 7+ years of product management experience with health plans, payer tech, RCM, or clinical claims decisioning."
+  },
+  {
+    "job_hash": "mock_workday_004",
+    "title": "Director of Product Management, Enterprise HealthTech Platform",
+    "company": "Kaiser Omnia Health",
+    "location": "US-Remote",
+    "url": "https://omniahealth.wd5.myworkdayjobs.com/OmniaCareers/job/Remote-USA/Director-Product-Management_R901234",
+    "ats_platform": "Workday",
+    "is_remote": true,
+    "description": "Kaiser Omnia Health is hiring a Director of Product Management to steer our enterprise digital health platform. You will lead multiple product squads delivering EHR integration, clinical decision support, FHIR pipelines, and RPM solutions across millions of patient lives. Account-gated enterprise ATS role requiring demonstrated track record leading multi-disciplinary engineering, data science, and clinical governance teams. Requirements: 8+ years product management leadership in enterprise healthcare, EHR systems (Epic/Cerner), and B2B SaaS."
+  },
+  {
+    "job_hash": "mock_workday_005",
+    "title": "Product Manager, Telehealth Operations",
+    "company": "Ascension Care Technologies",
+    "location": "US-Remote",
+    "url": "https://ascension.wd5.myworkdayjobs.com/CareCareers/job/Remote-USA/PM-Telehealth_R102938",
+    "ats_platform": "Workday",
+    "is_remote": true,
+    "description": "Seeking an operational Product Manager to support billing scheduling tools for virtual telehealth clinics. Basic product coordination experience required."
+  },
+  {
+    "job_hash": "mock_disqualified_006",
+    "title": "Senior Product Manager, Digital Health Care",
+    "company": "Texas Care Health",
+    "location": "Austin, TX",
+    "url": "https://boards.greenhouse.io/texascare/jobs/5592812",
+    "ats_platform": "Greenhouse",
+    "is_remote": false,
+    "description": "Onsite role located five days a week at our Austin, TX hospital headquarters. Leads clinical digital health tools."
+  },
+  {
+    "job_hash": "mock_unrelated_007",
+    "title": "Senior Embedded Firmware Engineer",
+    "company": "Quantum IoT Devices",
+    "location": "US-Remote",
+    "url": "https://jobs.lever.co/quantum-iot/31920192",
+    "ats_platform": "Lever",
+    "is_remote": true,
+    "description": "Develop low-level C++ drivers for microcontroller boards and RTOS platforms. No healthcare or product management responsibilities."
+  }
+]
