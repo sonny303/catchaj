@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.1] - 2026-09-12
+
+### Fixed
+- **Showcase Website Brand Assets:** Fixed broken logo rendering on live production site (`catchaj.sowmya.win`) by bundling `catchaj-logo.png` directly into the Vite build pipeline, placing static root assets in `website/public/`, adding legacy proxy fallback paths (`/__l5e/...`), and implementing graceful browser `onError` fallbacks across all marketing routes (`/`, `/how-to`, `/clexibility`).
+- **TypeScript Environment Support:** Added `website/src/vite-env.d.ts` for ambient typing of image imports (`.png`, `.svg`) and Lovable `.asset.json` descriptors.
+
 ## [1.0.0] - 2026-09-12
 
 ### Added
