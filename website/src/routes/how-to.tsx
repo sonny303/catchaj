@@ -2,7 +2,10 @@
 // Presents the workflow, capabilities, installation paths, and support links.
 
 import { createFileRoute, Link } from "@tanstack/react-router";
+import catchajLogo from "@/assets/catchaj-logo.png";
 import logoAsset from "@/assets/catchaj-logo.png.asset.json";
+
+const logoSrc = catchajLogo || logoAsset.url || "/catchaj-logo.png";
 import {
   ArrowDownRight,
   ArrowRight,
@@ -80,7 +83,16 @@ function CatchajPage() {
       <header className="border-b border-border">
         <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12">
           <Link to="/" aria-label="Catchaj home" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-            <img src={logoAsset.url} alt="Catchaj" className="h-8 w-auto" />
+            <img
+              src={logoSrc}
+              alt="Catchaj"
+              className="h-8 w-auto"
+              onError={(e) => {
+                if (e.currentTarget.src !== window.location.origin + "/catchaj-logo.png") {
+                  e.currentTarget.src = "/catchaj-logo.png";
+                }
+              }}
+            />
           </Link>
           <nav aria-label="Primary navigation" className="hidden items-center gap-8 lg:flex">
             <Link to="/" className="nav-link">Why we built this</Link>
@@ -219,7 +231,19 @@ function CatchajPage() {
       <footer id="help" className="border-t border-border bg-card">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12">
           <div className="grid gap-10 md:grid-cols-3">
-            <div><img src={logoAsset.url} alt="Catchaj" className="h-8 w-auto" /><p className="mt-4 max-w-xs text-sm leading-6 text-muted-foreground">Flexible search, role resolution, and agent-powered building for context-aware teams.</p></div>
+            <div>
+              <img
+                src={logoSrc}
+                alt="Catchaj"
+                className="h-8 w-auto"
+                onError={(e) => {
+                  if (e.currentTarget.src !== window.location.origin + "/catchaj-logo.png") {
+                    e.currentTarget.src = "/catchaj-logo.png";
+                  }
+                }}
+              />
+              <p className="mt-4 max-w-xs text-sm leading-6 text-muted-foreground">Flexible search, role resolution, and agent-powered building for context-aware teams.</p>
+            </div>
             <div><p className="font-mono text-[10px] font-bold uppercase text-muted-foreground">Contribute</p><div className="mt-4 space-y-3 text-sm"><p className="flex items-center gap-2"><GitBranch className="h-4 w-4 text-olive" aria-hidden="true" />Fork, branch, and open a pull request.</p><p className="flex items-center gap-2"><Braces className="h-4 w-4 text-olive" aria-hidden="true" />MIT licensed.</p></div></div>
             <div><p className="font-mono text-[10px] font-bold uppercase text-muted-foreground">Get help</p><div className="mt-4 flex flex-col items-start gap-3"><a className="nav-link" href="#install">Installation guide</a><span className="text-sm text-muted-foreground">Community: #catchaj</span><span className="text-sm text-muted-foreground">Issues and API docs in the repository</span></div></div>
           </div>

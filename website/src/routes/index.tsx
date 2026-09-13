@@ -4,9 +4,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDownRight, ArrowRight, Check, Pause, ShieldCheck } from "lucide-react";
 
+import catchajLogo from "@/assets/catchaj-logo.png";
 import logoAsset from "@/assets/catchaj-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { helpers, principles, productChoices } from "@/data/catchaj";
+
+const logoSrc = catchajLogo || logoAsset.url || "/catchaj-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,7 +36,16 @@ function SiteHeader() {
     <header className="border-b border-border bg-background">
       <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12">
         <Link to="/" aria-label="Catchaj home" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-          <img src={logoAsset.url} alt="Catchaj" className="h-8 w-auto" />
+          <img
+            src={logoSrc}
+            alt="Catchaj"
+            className="h-8 w-auto"
+            onError={(e) => {
+              if (e.currentTarget.src !== window.location.origin + "/catchaj-logo.png") {
+                e.currentTarget.src = "/catchaj-logo.png";
+              }
+            }}
+          />
         </Link>
         <nav aria-label="Primary navigation" className="hidden items-center gap-8 md:flex">
           <Link to="/" className="nav-link text-foreground" aria-current="page">Why we built this</Link>
@@ -121,7 +133,27 @@ function CatchajStoryPage() {
         <div className="mt-14 flex items-start gap-4 border-l-2 border-accent pl-5"><ShieldCheck className="mt-1 h-5 w-5 shrink-0 text-accent" aria-hidden="true" /><div><h3 className="font-semibold">Keep personal things personal.</h3><p className="mt-2 max-w-xl text-sm leading-6 text-muted-foreground">Local checks protect personal details and credentials. Demonstrations use a synthetic profile.</p></div></div>
       </section>
 
-      <footer className="border-t border-border bg-card"><div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-12 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12"><img src={logoAsset.url} alt="Catchaj" className="h-8 w-auto" /><div className="flex flex-wrap gap-6"><Link to="/how-to" className="nav-link">How to use</Link><Link to="/clexibility" className="nav-link">Clexibility</Link></div><Link to="/how-to" className="nav-link inline-flex items-center gap-2">Start with the guide <ArrowDownRight className="h-4 w-4" aria-hidden="true" /></Link></div></footer>
+      <footer className="border-t border-border bg-card">
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-12 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
+          <img
+            src={logoSrc}
+            alt="Catchaj"
+            className="h-8 w-auto"
+            onError={(e) => {
+              if (e.currentTarget.src !== window.location.origin + "/catchaj-logo.png") {
+                e.currentTarget.src = "/catchaj-logo.png";
+              }
+            }}
+          />
+          <div className="flex flex-wrap gap-6">
+            <Link to="/how-to" className="nav-link">How to use</Link>
+            <Link to="/clexibility" className="nav-link">Clexibility</Link>
+          </div>
+          <Link to="/how-to" className="nav-link inline-flex items-center gap-2">
+            Start with the guide <ArrowDownRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+        </div>
+      </footer>
     </main>
   );
 }

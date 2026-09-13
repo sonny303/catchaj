@@ -4,8 +4,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles } from "lucide-react";
 
+import catchajLogo from "@/assets/catchaj-logo.png";
 import logoAsset from "@/assets/catchaj-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
+
+const logoSrc = catchajLogo || logoAsset.url || "/catchaj-logo.png";
 import {
   Accordion,
   AccordionContent,
@@ -40,7 +43,16 @@ function ClexibilityPage() {
       <header className="border-b border-border">
         <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12">
           <Link to="/" aria-label="Catchaj home" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-            <img src={logoAsset.url} alt="Catchaj" className="h-8 w-auto" />
+            <img
+              src={logoSrc}
+              alt="Catchaj"
+              className="h-8 w-auto"
+              onError={(e) => {
+                if (e.currentTarget.src !== window.location.origin + "/catchaj-logo.png") {
+                  e.currentTarget.src = "/catchaj-logo.png";
+                }
+              }}
+            />
           </Link>
           <nav aria-label="Primary navigation" className="hidden items-center gap-8 md:flex">
             <Link to="/" className="nav-link">Why we built this</Link>
@@ -108,7 +120,24 @@ function ClexibilityPage() {
         </div>
       </section>
 
-      <footer className="border-t border-border bg-card"><div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-12 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12"><img src={logoAsset.url} alt="Catchaj" className="h-8 w-auto" /><p className="text-sm text-muted-foreground">Clear by design. Human by default.</p><Link to="/how-to" className="nav-link inline-flex items-center gap-2">See it in practice <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link></div></footer>
+      <footer className="border-t border-border bg-card">
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-12 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
+          <img
+            src={logoSrc}
+            alt="Catchaj"
+            className="h-8 w-auto"
+            onError={(e) => {
+              if (e.currentTarget.src !== window.location.origin + "/catchaj-logo.png") {
+                e.currentTarget.src = "/catchaj-logo.png";
+              }
+            }}
+          />
+          <p className="text-sm text-muted-foreground">Clear by design. Human by default.</p>
+          <Link to="/how-to" className="nav-link inline-flex items-center gap-2">
+            See it in practice <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+        </div>
+      </footer>
     </main>
   );
 }
